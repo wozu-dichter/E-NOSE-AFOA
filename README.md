@@ -32,19 +32,18 @@ pretrained_model_path=/home/xxxx/works/COVID-19/PMP/pretrained_model_dataset1/
    
 **Training**.  
 
-For example, train our model on dataset 1
+For example, train our model on the dataset
 
 ```Shell
-python train_on_dataset1.py
+CUDA_VISIBLE_DEVICES=0 python main.py --batch-size 128 --lstm-hidden 64 --dataset e-nose --res-first-filters 16 --attention-mode cbam2 --epochs 100 --stage-num 3 --pool-size 8 --dropout 0.2 --r-dropout 0.1 --d-dropout 0.05 --sensor 0
 ```
-It will save the models in ```./checkpionts/``` and results in ```./res/```.
+It will save the models in ```./saved_models/```.
    
    
 **Testing**.  
 
-For example, directly evaluate the model trained from dataset1 on dataset 2.
+For example, directly evaluate the model trained from dataset.
 
 ```Shell
-python test_on_dataset2_baseline.py
+CUDA_VISIBLE_DEVICES=0 python eval.py --dataset e-nose --model-path e-Nose_resnet20_cbam_block_model.106_sensor0_len600.h5 --sensor 0
 ```
-It will save the results in ```./res/```.
