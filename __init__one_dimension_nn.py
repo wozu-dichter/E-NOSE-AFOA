@@ -6,8 +6,6 @@ import math
 import os
 from PIL import Image
 
-# retention_time = 900
-
 #创建文件夹
 def mkdir(path):
     # 引入模块
@@ -84,7 +82,6 @@ def dynamicRNN(x, seqlen, weights, biases, cell, n_classes):
     logits = fully_connected(states[NUM_OF_LAYERS-1][1],n_classes,activation_fn=None)
     
     # outputs的形状为(batch_size, max_seq_len, n_hidden)
-    # 如果有疑问可以参考上一章内容
 
     # 我们希望的是取出与序列长度相对应的输出。如一个序列长度为10，我们就应该取出第10个输出
     # 但是TensorFlow不支持直接对outputs进行索引，因此我们用下面的方法来做：
