@@ -49,8 +49,8 @@ parser = argparse.ArgumentParser(description="Keras iNose signals Training.")
 parser.add_argument('--attention-mode', type=str, default='cbam2',
                     choices=['se','cbam1','cbam2','cbam3','cbam4','cbam5','None'],
                     help='attention mode (default: cbam_block_channel_first)')
-parser.add_argument('--dataset', type=str, default='inose-35-batch3-3P3N',
-                    choices=['inose-31', 'inose-10-old', 'inose-26','inose-10-new','inose-16', 'inose-10-old-0','inose-35-batch3-3P3N','inose-35-batch3-P2N','inose-35-batch3-N2P','inose-35-batch3-3P3N-zero'],
+parser.add_argument('--dataset', type=str, default='e-nose',
+                    choices=['e-nose'],
                     help='dataset name (default: inose-v1)')
 parser.add_argument('--lstm-hidden', type=int, default=128,
                     help='lstm hidden layers')
