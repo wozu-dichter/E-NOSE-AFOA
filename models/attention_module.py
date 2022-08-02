@@ -2,7 +2,6 @@ from keras.layers import GlobalAveragePooling1D, GlobalMaxPooling1D, Reshape, De
 from keras import backend as K
 from keras.activations import sigmoid
 from keras import initializers
-import pdb
 
 def attach_attention_module(net, attention_module, cbam_mode):
   if attention_module == 'se_block': # SE_block
@@ -47,7 +46,6 @@ def cbam_block(cbam_feature, ratio=8, mode=1):
 	"""Contains the implementation of Convolutional Block Attention Module(CBAM) block.
 	As described in https://arxiv.org/abs/1807.06521.
 	"""
-	# pdb.set_trace()
 	if mode ==1:
 		# cbam_block_parallel mode
 		channel_feature = channel_attention(cbam_feature, ratio)
