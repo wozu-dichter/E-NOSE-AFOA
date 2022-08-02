@@ -176,7 +176,7 @@ input_shape = x_train.shape[1:]
 print('input_shape :',input_shape)
 
 depth = 20 # For ResNet, specify the depth (e.g. ResNet50: depth=50)
-parallel_model = resnet_v4.resnet_v2_original(input_shape=input_shape, depth=depth, attention_module=attention_module, \
+parallel_model = resnet_v2.resnet_v2_original(input_shape=input_shape, depth=depth, attention_module=attention_module, \
     cbam_mode=cbam_mode, lstm_layers=LSTM_layers,return_sequences=return_sequences,num_filters_in=args.res_first_filters, \
     pool_size=args.pool_size,stages_num=args.stage_num,dropout=args.dropout,recurrent_dropout=args.r_dropout,dense_dropout=args.d_dropout)   
 
