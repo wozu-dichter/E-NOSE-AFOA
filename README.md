@@ -47,3 +47,17 @@ For example, directly evaluate the model trained from dataset.
 ```Shell
 CUDA_VISIBLE_DEVICES=0 python eval.py --dataset e-nose --model-path e-Nose_resnet20_cbam_block_model.106_sensor0_len600.h5 --sensor 0
 ```
+
+**Citation**
+
+If you use this code for your research, please cite our paper:
+```
+@article{fang2022smart,
+  title={Smart Electronic Nose Enabled by an All-Feature Olfactory Algorithm},
+  author={Fang, Cong and Li, Hua-Yao and Li, Long and Su, Hu-Yin and Tang, Jiang and Bai, Xiang and Liu, Huan},
+  journal={Advanced Intelligent Systems},
+  pages={2200074},
+  year={2022},
+  publisher={Wiley Online Library}
+}
+```
