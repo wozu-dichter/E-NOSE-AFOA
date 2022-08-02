@@ -2,7 +2,7 @@
 
 
 ### Introduction
-This repository contains the code of the paper [Smart electronic nose enabled by an all-feature olfactory algorithm (AFOA)]. Our method combines one-dimensional convolutional and recurrent neural networks with channel and temporal attention modules to fully utilize complementary global and dynamic information in an end-to-end manner. We further demonstrate that a novel data augmentation method can transform the raw data into a suitable representation for feature extraction. The experimental results show that the smart e-nose simply comprising of six semiconductor gas sensors achieves superior performances to state-of-the-art methods on real-world data.
+This repository contains the code of the paper [Smart electronic nose enabled by an all-feature olfactory algorithm (AFOA)](https://onlinelibrary.wiley.com/doi/epdf/10.1002/aisy.202200074). Our method combines one-dimensional convolutional and recurrent neural networks with channel and temporal attention modules to fully utilize complementary global and dynamic information in an end-to-end manner. We further demonstrate that a novel data augmentation method can transform the raw data into a suitable representation for feature extraction. The experimental results show that the smart e-nose simply comprising of six semiconductor gas sensors achieves superior performances to state-of-the-art methods on real-world data. 
 
 <p align="center"><img width="100%" src="figures/Fig.1.jpg" /></p>
 
