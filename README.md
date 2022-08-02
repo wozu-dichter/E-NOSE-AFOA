@@ -45,7 +45,7 @@ It will save the models in ```./saved_models/```.
 For example, directly evaluate the model trained from dataset.
 
 ```Shell
-CUDA_VISIBLE_DEVICES=0 python eval.py --dataset e-nose --model-path e-Nose_resnet20_cbam_block_model.106_sensor0_len600.h5 --sensor 0
+CUDA_VISIBLE_DEVICES=0 python eval.py --dataset e-nose --model-path your_model_name.h5 --sensor 0
 ```
 
 **Citation**
