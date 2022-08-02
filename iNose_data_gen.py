@@ -19,30 +19,14 @@ def iNose_data_gen(time_step, num_train_data, num_test_data, num_sensor, num_tra
 
     images_train_raw, labels_train, time_labels_train = next_element_train
     images_test_raw, labels_test, time_labels_test = next_element_test
-
-    # print('images_train_raw shape:',images_train_raw.shape)
-    # print('images_test_raw shape:',images_test_raw.shape)
-
     images_train = tf.reshape(images_train_raw, [num_train_data, time_step, num_sensor*num_transform])
     images_test = tf.reshape(images_test_raw, [num_test_data, time_step, num_sensor*num_transform])
-
-    # print('images_train shape:',images_train.shape)
-    # print('images_test shape:',images_test.shape)
-
-    # print('labels_train shape:',labels_train.shape)
-    # print('labels_test shape:',labels_test.shape)
 
     init = tf.global_variables_initializer()
     gpu_options = tf.GPUOptions(allow_growth=True)
     with tf.Session(config=tf.ConfigProto(gpu_options=gpu_options)) as sess:
         sess.run(init)
         images_train_load, labels_train_load, time_labels_train_load, images_test_load, labels_test_load, time_labels_test_load = sess.run([images_train, labels_train, time_labels_train, images_test, labels_test, time_labels_test])
-
-    # print('loaded images_train shape:',images_train_load.shape)
-    # print('loaded images_test shape:',images_test_load.shape)
-
-    # print('loaded labels_train shape:',labels_train_load.shape)
-    # print('loaded labels_test shape:',labels_test_load.shape)
 
     return images_train_load, labels_train_load, time_labels_train_load, images_test_load, labels_test_load, time_labels_test_load
 
