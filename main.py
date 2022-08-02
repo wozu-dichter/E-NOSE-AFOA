@@ -7,7 +7,7 @@ from keras.callbacks import ModelCheckpoint, LearningRateScheduler
 from keras.callbacks import ReduceLROnPlateau
 from keras.preprocessing.image import ImageDataGenerator
 from keras import backend as K
-from models import resnet_v4
+from models import resnet_v2
 from utils import lr_schedule
 import numpy as np
 import os
