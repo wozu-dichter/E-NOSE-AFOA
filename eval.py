@@ -23,7 +23,6 @@ from sklearn.metrics import confusion_matrix
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import precision_recall_fscore_support
 from keras.models import load_model
-import pdb
 
 import matplotlib.pyplot as plt
 from numpy import var
