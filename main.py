@@ -108,7 +108,6 @@ else:
 # cbam mode 4: channel_attention_module_only mode       
 # cbam mode 5: spatial_attention_module_only mode
 
-
 if attention_module == 'cbam_block':
 	if cbam_mode==1:
 	    mode_type='cbam_block_parallel'
